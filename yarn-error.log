@@ -1,0 +1,36 @@
+Arguments: 
+  /snap/node/2752/bin/node /snap/node/2752/bin/yarn.js config get npmRegistryServer
+
+PATH: 
+  /opt/lampp/htdocs/simplon/BriefEquipe/node_modules/.bin:/opt/lampp/htdocs/simplon/node_modules/.bin:/opt/lampp/htdocs/node_modules/.bin:/opt/lampp/node_modules/.bin:/opt/node_modules/.bin:/node_modules/.bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  14.3.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, write
+      at writeSync (fs.js:694:3)
+      at SyncWriteStream._write (internal/fs/sync_write_stream.js:24:3)
+      at writeOrBuffer (_stream_writable.js:352:12)
+      at SyncWriteStream.Writable.write (_stream_writable.js:303:10)
+      at ConsoleReporter._log (/snap/node/2752/lib/cli.js:96769:17)
+      at ConsoleReporter.log (/snap/node/2752/lib/cli.js:96757:10)
+      at get (/snap/node/2752/lib/cli.js:87535:14)
+      at Object.<anonymous> (/snap/node/2752/lib/cli.js:25940:25)
+      at Generator.next (<anonymous>)
+      at step (/snap/node/2752/lib/cli.js:310:30)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
