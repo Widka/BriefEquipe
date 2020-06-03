@@ -26,35 +26,39 @@ if ($identifiantFormulaire == "create")
 </section>
 
 <br>
-<!--
+
 <section class="updateSection cache">
     <button class="closePopup">Fermer la popup</button>
     <h2>Modifier un article (Update)</h2>
     <form id="update" class="admin" action="" method="POST">
         <div class="infosUpdate">
-            <input type="text" name="titre" required placeholder="Entrer le titre">
-            <textarea name="contenu" cols="60" rows="8" required placeholder="Entrer le contenu"></textarea>
-            <input type="text" name="image" required value="assets/img/photo1.jpg">
-            <input type="text" name="datePublication" value="<?php echo date("Y-m-d H:i:s") ?>">
-            <input type="text" name="categorie" required placeholder="Entrez la catégorie">
+        <input type="text" name="username" required placeholder="Entrer votre Username">
+        <br><textarea name="skills" cols="60" rows="8" required placeholder="Entrer le contenu de la compétence"></textarea><br>
+        
+        <input type="radio" id="level" name="level" value="level1">
+            <label for="level1">Niveau 1</label><br>
+        <input type="radio" id="level" name="level" value="level2">
+            <label for="level2">Niveau 2</label><br>
+        <input type="radio" id="level" name="level" value="level3">
+            <label for="level3">Niveau 3</label><br>
             <input type="text" name="id" required placeholder="Entrez id ligne">
         </div>
 
         <input type="hidden" name="identifiantFormulaire" value="update">
-        <button type="submit">Modifier l'article</button>
+        <button type="submit">Modifier la compétence</button>
         <div class="confirmation">
         <?php 
 $identifiantFormulaire = $_REQUEST["identifiantFormulaire"] ?? "";
 if ($identifiantFormulaire == "update")
 {
-    require "php/controller/form-articles.php"; 
+    require "php/controller/crud.php"; 
 }        
             ?>
         </div>
 
     </form>
 </section>
--->
+
 <section class="cache">
     <h2>Supprimer compétence</h2>
     <form id="delete" action="" method="POST">
@@ -81,12 +85,12 @@ if ($identifiantFormulaire == "delete")
         <thead>
             
             <tr>
-                <td>Id</td>
-                <td>Username</td>
-                <td>Compétence</td>
-                <td>Niveau</td>
-                <td>Modifier</td>
-                <td>Supprimer</td>
+                <td>Id</td><br>
+                <td>Username</td><br>
+                <td>Compétence</td><br>
+                <td>Niveau</td><br>
+                <td>Modifier</td><br>
+                <td>Supprimer</td><br>
             </tr>
         </thead>
         <tbody>
@@ -125,8 +129,8 @@ foreach($tabLigne as $tabAsso)
         <button data-id="$id" class="update">Modifier</button>
         <!-- ON PEUT DONNER PLUSIEURS CLASSES A UNE BALISE -->
         <div class="infosUpdate cache">
-            <input type="text" name="username" required placeholder="Entrer votre username" value="$username">
-            <textarea name="skills" cols="60" rows="8" required placeholder="Entrer le contenu de la compétence">$skills</textarea>
+            <input type="text" name="username" required placeholder="Entrer votre username" value="$username"><br>
+            <textarea name="skills" cols="60" rows="8" required placeholder="Entrer le contenu de la compétence">$skills</textarea><br>
             <input type="radio" id="level" name="level" value="$level">
                 <label for="level1">Niveau 1</label><br>
             <input type="radio" id="level" name="level" value="$level">

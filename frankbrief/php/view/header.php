@@ -6,7 +6,7 @@
     <title>SkillManagementProject</title>
     <link rel="stylesheet" href="assets/css/style.css">
     
-    </head>
+</head>
 <body>
     <header> 
     <h1>SkillManagementProject</h1>

@@ -78,7 +78,7 @@ CODESQL;
 if ($identifiantFormulaire == "update")
 {
     $tabAssoColonneValeur = [
-        "username"            => filtrer("username"),
+        "username"        => filtrer("username"),
         "skills"          => filtrer("skills"),
         "level"           => filtrer("level"),
     ];
