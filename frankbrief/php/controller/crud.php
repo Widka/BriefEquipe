@@ -1,8 +1,8 @@
 <?php
 
-function filtrer($user="id")
+function filtrer($username="id")
 {
-    $resultat = $_REQUEST[$user] ?? "";
+    $resultat = $_REQUEST[$username] ?? "";
     return $resultat;
 }
 
@@ -11,15 +11,14 @@ $identifiantFormulaire = filtrer("identifiantFormulaire");
 if ($identifiantFormulaire == "create")
 {
     $tabAssoColonneValeur = [
-        "user"            => filtrer("user"),
+        "username"        => filtrer("username"),
         "skills"          => filtrer("skills"),
         "level"           => filtrer("level"),
         
     ];
     extract($tabAssoColonneValeur);
 
-    if ($id != ""
-        && $user != ""
+    if ($username != ""
         && $skills != ""
         && $level != "")
     {
@@ -27,9 +26,9 @@ if ($identifiantFormulaire == "create")
 <<<CODESQL
 
 INSERT INTO skill
-( user, skills, level)
+( username, skills, level)
 VALUES
-( :user, :skills, :level)
+( :username, :skills, :level)
 
 CODESQL;
 
@@ -79,7 +78,7 @@ CODESQL;
 if ($identifiantFormulaire == "update")
 {
     $tabAssoColonneValeur = [
-        "user"            => filtrer("user"),
+        "username"            => filtrer("username"),
         "skills"          => filtrer("skills"),
         "level"           => filtrer("level"),
     ];
@@ -96,9 +95,9 @@ if ($identifiantFormulaire == "update")
 
 UPDATE skill 
 SET 
-    user           = :user,
-    skills         = :skills,
-    level           = :level
+    username           = :username,
+    skills             = :skills,
+    level              = :level
 WHERE 
     id = :id;
 
