@@ -13,8 +13,53 @@ html, body {
     margin:0.25rem;
     padding:0.25rem;
 }
-h2  {
-    font-size: xx-large;
-}
 
+.container {
+    border:double 5px #000000;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright:5px;
+-moz-border-radius-bottomleft:5px;
+-moz-border-radius-bottomright:5px;
+-webkit-border-top-left-radius:5px;
+-webkit-border-top-right-radius:5px;
+-webkit-border-bottom-left-radius:5px;
+-webkit-border-bottom-right-radius:5px;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+}
+.cache {
+    border:double 5px #000000;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright:5px;
+-moz-border-radius-bottomleft:5px;
+-moz-border-radius-bottomright:5px;
+-webkit-border-top-left-radius:5px;
+-webkit-border-top-right-radius:5px;
+-webkit-border-bottom-left-radius:5px;
+-webkit-border-bottom-right-radius:5px;
+border-top-left-radius:5px;
+border-top-right-radius:5px;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+}
+h1  {
+    text-align: center;
+    text-decoration: underline;
+    color: slategrey;
+}
+h2 {
+    text-align: center;
+    font-size: bold;
+}
+body {
+    background-color: peachpuff;
+}
+button {
+    margin-left: 40%;
+    margin-right: 40%;
+         
+
+}
     
